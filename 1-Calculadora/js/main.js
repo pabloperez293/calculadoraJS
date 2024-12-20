@@ -14,9 +14,20 @@ buttons.forEach((item) => {
       display.innerHTML = "Null";
       setTimeout(() => ((display.innerText = ""), 2000));
     } else {
-        display.innerText += item.id;
+      display.innerText += item.id;
     }
   };
 });
 
 // Switch para hacer el cambio de thema dark
+
+const themeToggleBtn = document.querySelector(".themeToggler");
+const calculator = document.querySelector(".calculator");
+
+let isDark = true;
+
+themeToggleBtn.onclick = () => {
+  calculator.classList.toggle("dark");
+  themeToggleBtn.classList.toggle("active");
+  isDark=!isDark;
+};

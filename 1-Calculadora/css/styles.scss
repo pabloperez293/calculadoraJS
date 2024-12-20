@@ -89,7 +89,8 @@ body {
   cursor: pointer;
   z-index: 1;
   &::before {
-    content: ´´;
+    content: '';
+    position: absolute;
     height: 30px;
     top: 50%;
     transform: translate(-50%, -50%);

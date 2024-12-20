@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -93,7 +92,8 @@ body {
   z-index: 1;
 }
 .themeToggler::before {
-  content: ´´;
+  content: "";
+  position: absolute;
   height: 30px;
   top: 50%;
   transform: translate(-50%, -50%);
