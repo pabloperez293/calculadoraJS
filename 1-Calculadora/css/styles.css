@@ -30,6 +30,15 @@ body {
 }
 .calculator #display {
   color: #525252;
+  margin: 0 10px;
+  height: 150px;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 800;
 }
 .calculator #equal {
   height: 130px;
