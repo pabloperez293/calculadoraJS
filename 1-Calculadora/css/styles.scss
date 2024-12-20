@@ -50,46 +50,69 @@ body {
   .btn-operator {
     background-color: #d0ffd6;
     color: #6967f9;
+    font-weight: 800;
   }
   .btn-equal {
     background-color: #c9f9ad;
     color: #000;
   }
-  .themeToggler {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1;
-    &::before {
-      content: ´´;
-      height: 30px;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background-color: #333;
-      z-index: -1;
+  // Theme Dark
+  &.dark {
+    background-color: #000;
+    #display {
+      color: white;
     }
-  }
-  .themeToggler .active {
-    color: #333;
-    &::before {
-      background-color: #fff;
+    #clear {
+      background-color: #4c35aa;
+      color: white;
     }
-  }
-  button {
-    height: 60px;
-    width: 60px;
-    border-radius: 30px;
-    margin: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    &:hover {
-      transform: scale(1.1);
+    .btn-number {
+      background-color: #8efda6;
+      color: black;
+      font-weight: 500;
+    }
+    .btn-operator {
+      background-color: #f0db4f;
+      color: black;
+    }
+    .btn-equal {
+      background-color: #f0db4f;
+      color: black;
     }
   }
 }
-
-    // Dark theme
+.themeToggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+  &::before {
+    content: ´´;
+    height: 30px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+  }
+}
+.themeToggler .active {
+  color: #333;
+  &::before {
+    background-color: #fff;
+  }
+}
+button {
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

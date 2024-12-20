@@ -18,3 +18,5 @@ buttons.forEach((item) => {
     }
   };
 });
+
+// Switch para hacer el cambio de thema dark

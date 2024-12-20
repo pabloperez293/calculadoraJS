@@ -54,12 +54,37 @@ body {
 .calculator .btn-operator {
   background-color: #d0ffd6;
   color: #6967f9;
+  font-weight: 800;
 }
 .calculator .btn-equal {
   background-color: #c9f9ad;
   color: #000;
 }
-.calculator .themeToggler {
+.calculator.dark {
+  background-color: #000;
+}
+.calculator.dark #display {
+  color: white;
+}
+.calculator.dark #clear {
+  background-color: #4c35aa;
+  color: white;
+}
+.calculator.dark .btn-number {
+  background-color: #8efda6;
+  color: black;
+  font-weight: 500;
+}
+.calculator.dark .btn-operator {
+  background-color: #f0db4f;
+  color: black;
+}
+.calculator.dark .btn-equal {
+  background-color: #f0db4f;
+  color: black;
+}
+
+.themeToggler {
   position: absolute;
   top: 30px;
   right: 30px;
@@ -67,7 +92,7 @@ body {
   cursor: pointer;
   z-index: 1;
 }
-.calculator .themeToggler::before {
+.themeToggler::before {
   content: ´´;
   height: 30px;
   top: 50%;
@@ -76,13 +101,15 @@ body {
   background-color: #333;
   z-index: -1;
 }
-.calculator .themeToggler .active {
+
+.themeToggler .active {
   color: #333;
 }
-.calculator .themeToggler .active::before {
+.themeToggler .active::before {
   background-color: #fff;
 }
-.calculator button {
+
+button {
   height: 60px;
   width: 60px;
   border-radius: 30px;
@@ -91,6 +118,6 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.calculator button:hover {
+button:hover {
   transform: scale(1.1);
 }/*# sourceMappingURL=styles.css.map */
