@@ -23,7 +23,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(187, 130, 130);
-  background-color: #d1caca;
+  background-color: #857c7c;
   #display {
     color: #525252;
     margin: 0 10px;
@@ -56,6 +56,24 @@ body {
     background-color: #c9f9ad;
     color: #000;
   }
+  .fa-solid {
+    color: black;
+    padding: 20px;
+  }
+  .fa-sun {
+    background-color: #f0db4f;
+    color: blue;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
   // Theme Dark
   &.dark {
     background-color: #000;
@@ -80,8 +98,8 @@ body {
       color: black;
     }
     .fa-solid {
-    color: black;
-    padding: 20px;      
+      color: black;
+      padding: 20px;
     }
     .fa-moon {
       background-color: #f0db4f;
@@ -123,6 +141,7 @@ body {
   }
 }
 button {
+    
   height: 60px;
   width: 60px;
   border-radius: 30px;
@@ -134,3 +153,12 @@ button {
     transform: scale(1.1);
   }
 }
+// #history {
+//   height: 240px;
+//   width: 370px;
+//   align-items: flex-end;
+//   justify-content: center;
+//   overflow: scroll;
+//   background: grey;
+//   padding: 10px 20px;
+// }

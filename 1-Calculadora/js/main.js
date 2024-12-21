@@ -23,6 +23,7 @@ buttons.forEach((item) => {
 
 const themeToggleBtn = document.querySelector(".themeToggler");
 const calculator = document.querySelector(".calculator");
+const togglerIcon = document.querySelector(".fa-solid");
 
 let isDark = true;
 
@@ -30,4 +31,10 @@ themeToggleBtn.onclick = () => {
   calculator.classList.toggle("dark");
   themeToggleBtn.classList.toggle("active");
   isDark=!isDark;
+
+  if (isDark) {
+    togglerIcon.className = "fa-solid fa-moon";
+  } else {
+    togglerIcon.className = "fa-solid fa-sun";
+  }
 };

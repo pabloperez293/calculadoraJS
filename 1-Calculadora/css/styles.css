@@ -25,7 +25,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 30px rgb(187, 130, 130);
-  background-color: #d1caca;
+  background-color: #857c7c;
 }
 .calculator #display {
   color: #525252;
@@ -58,6 +58,24 @@ body {
 .calculator .btn-equal {
   background-color: #c9f9ad;
   color: #000;
+}
+.calculator .fa-solid {
+  color: black;
+  padding: 20px;
+}
+.calculator .fa-sun {
+  background-color: #f0db4f;
+  color: blue;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.calculator .fa-sun:hover {
+  transform: scale(1.1);
 }
 .calculator.dark {
   background-color: #000;
