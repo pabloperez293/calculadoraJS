@@ -79,6 +79,23 @@ body {
       background-color: #f0db4f;
       color: black;
     }
+    .fa-solid {
+    color: black;
+    padding: 20px;      
+    }
+    .fa-moon {
+      background-color: #f0db4f;
+      height: 60px;
+      width: 60px;
+      border-radius: 30px;
+      margin: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 .themeToggler {
@@ -89,7 +106,7 @@ body {
   cursor: pointer;
   z-index: 1;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 30px;
     top: 50%;

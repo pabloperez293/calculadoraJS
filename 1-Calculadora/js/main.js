@@ -19,7 +19,7 @@ buttons.forEach((item) => {
   };
 });
 
-// Switch para hacer el cambio de thema dark
+// Change theme dark
 
 const themeToggleBtn = document.querySelector(".themeToggler");
 const calculator = document.querySelector(".calculator");
