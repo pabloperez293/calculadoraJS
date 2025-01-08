@@ -1,6 +1,8 @@
+// References to the main elements
 const display = document.querySelector("#display");
 const buttons = document.querySelectorAll("button");
 
+// Iterate over each button to assign events
 buttons.forEach((item) => {
   item.onclick = () => {
     if (item.id == "clear") {
@@ -26,12 +28,12 @@ const calculator = document.querySelector(".calculator");
 const togglerIcon = document.querySelector(".fa-solid");
 
 let isDark = true;
-
+// Event to toggle theme
 themeToggleBtn.onclick = () => {
   calculator.classList.toggle("dark");
   themeToggleBtn.classList.toggle("active");
-  isDark=!isDark;
-
+  isDark = !isDark;
+  // Change icon
   if (isDark) {
     togglerIcon.className = "fa-solid fa-moon";
   } else {

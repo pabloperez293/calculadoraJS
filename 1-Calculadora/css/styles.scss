@@ -1,3 +1,15 @@
+// Defining Reusable Variables
+$primary-color: #f0db4f;
+$secondary-color: #8efda6;
+$dark-bg: #000;
+$light-bg: #c3eaff;
+$text-dark: #525252;
+$text-light: #fff;
+$button-radius: 30px;
+$button-size: 60px;
+$transition-speed: 0.2s;
+
+// Styles global
 * {
   padding: 0;
   margin: 0;
@@ -6,8 +18,9 @@
 }
 
 body {
-  background: linear-gradient(45deg, #459df4cc, #56404f);
+  background: linear-gradient(45deg, lighten($primary-color, 20%), darken($secondary-color, 20%));
 }
+
 .container {
   height: 100vh;
   width: 100vh;
@@ -16,6 +29,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .calculator {
   position: relative;
   height: auto;
@@ -23,12 +37,12 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 30px rgba(187, 130, 130);
-  background-color: #857c7c;
+  background-color: $light-bg;
+
   #display {
-    color: #525252;
+    color: $text-dark;
     margin: 0 10px;
     height: 150px;
-    width: auto;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -36,93 +50,79 @@ body {
     margin-bottom: 20px;
     font-weight: 800;
   }
+
   #equal {
-    height: 130px;
+    height: $button-size * 2.2;
   }
+
   #clear {
-    background-color: #ffd5d8;
-    color: #fc4552;
+    background-color: lighten($primary-color, 20%);
+    color: darken($primary-color, 30%);
   }
+
   .btn-number {
-    background-color: #c3eaff;
+    background-color: $light-bg;
     color: #000;
   }
+
   .btn-operator {
-    background-color: #d0ffd6;
-    color: #6967f9;
+    background-color: lighten($secondary-color, 20%);
+    color: darken($secondary-color, 40%);
     font-weight: 800;
   }
+
   .btn-equal {
-    background-color: #c9f9ad;
+    background-color: lighten($secondary-color, 30%);
     color: #000;
   }
+
   .fa-solid {
     color: black;
     padding: 20px;
   }
-  .fa-sun {
-    background-color: #f0db4f;
-    color: blue;
-    height: 60px;
-    width: 60px;
-    border-radius: 30px;
-    margin: 5px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-  // Theme Dark
+
   &.dark {
-    background-color: #000;
+    background-color: $dark-bg;
+
     #display {
-      color: white;
+      color: $text-light;
     }
+
     #clear {
-      background-color: #4c35aa;
-      color: white;
+      background-color: darken($primary-color, 20%);
+      color: $text-light;
     }
+
     .btn-number {
-      background-color: #8efda6;
-      color: black;
+      background-color: $secondary-color;
+      color: $dark-bg;
       font-weight: 500;
     }
+
     .btn-operator {
-      background-color: #f0db4f;
-      color: black;
+      background-color: $primary-color;
+      color: $dark-bg;
     }
+
     .btn-equal {
-      background-color: #f0db4f;
-      color: black;
+      background-color: $primary-color;
+      color: $dark-bg;
     }
+
     .fa-solid {
-      color: black;
-      padding: 20px;
-    }
-    .fa-moon {
-      background-color: #f0db4f;
-      height: 60px;
-      width: 60px;
-      border-radius: 30px;
-      margin: 5px;
-      font-size: 20px;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      &:hover {
-        transform: scale(1.1);
-      }
+      color: $text-light;
     }
   }
 }
+
 .themeToggler {
   position: absolute;
   top: 30px;
   right: 30px;
-  color: #fff;
+  color: $text-light;
   cursor: pointer;
   z-index: 1;
+
   &::before {
     content: "";
     position: absolute;
@@ -133,32 +133,26 @@ body {
     background-color: #333;
     z-index: -1;
   }
-}
-.themeToggler .active {
-  color: #333;
-  &::before {
-    background-color: #fff;
+
+  .active {
+    color: #333;
+
+    &::before {
+      background-color: $text-light;
+    }
   }
 }
+
 button {
-    
-  height: 60px;
-  width: 60px;
-  border-radius: 30px;
+  height: $button-size;
+  width: $button-size;
+  border-radius: $button-radius;
   margin: 5px;
   font-size: 20px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all $transition-speed ease;
+
   &:hover {
     transform: scale(1.1);
   }
 }
-// #history {
-//   height: 240px;
-//   width: 370px;
-//   align-items: flex-end;
-//   justify-content: center;
-//   overflow: scroll;
-//   background: grey;
-//   padding: 10px 20px;
-// }
