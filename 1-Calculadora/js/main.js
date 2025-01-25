@@ -50,4 +50,4 @@ themeToggleBtn.onclick = () => {
   } else {
     togglerIcon.className = "fa-solid fa-sun";
   }
-};
+}}
