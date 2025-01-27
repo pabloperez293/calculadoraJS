@@ -1,17 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Administrador de clientes</title>
-    <link href="/dist/styles.css" rel="stylesheet">
+    <link href="/dist/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container mt-5 p-5">
+      <h2 class="text-center my-5 titulo">
+        Administrador de Clientes para reparar su Computadoras
+      </h2>
+      <div id="contenido" class="row">
+        <div class="col-md-6 agregar-cita">
+          <form id="col-md-6 add-appointment">
+            <legend class="mb-4">Datos del Dispositivo</legend>
+            <div class="form-group row">
+              <label class="col-sm-4 col-lg-4 col-form-label">Cliente:</label>
+              <div class="col-sm-8 col-lg-8">
+                <input
+                  type="text"
+                  id="cliente"
+                  name="cliente"
+                  class="form-control"
+                  placeholder="Nombre del Cliente"
+                />
+              </div>
+            </div>
 
-</head>
-<body>
-    <h2 class="text-center my-5 titulo">Administrador de Clientes para Reparar su Celular</h2>
+            <div class="form-group row">
+                <label class="col-sm-4 col-lg-4 col-form-label">Modelo del Dispositivo:</label>
+                <div class="col-sm-8 col-lg-8">
+                    <input type="text" id="dispositivo" name="dispositivo" class="form-control"  placeholder="Marca y Modelo del Dispositivo">
+                </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-lg-4 col-form-label">Teléfono:</label>
+              <div class="col-sm-8 col-lg-8">
+                  <input type="tel" id="telefono" name="telefono" class="form-control"  placeholder="Número de Teléfono">
+              </div>
+          </div>
+          <div class="form-group row">
+              <label class="col-sm-4 col-lg-4 col-form-label">Fecha:</label>
+              <div class="col-sm-8 col-lg-8">
+                  <input type="date" id="fecha" name="fecha" class="form-control">
+              </div>
+          </div>
 
-    <h1 class="text-3xl font-bold underline">
-        Hello asd!
-      </h1> 
-</body>
+          <div class="form-group row">
+              <label class="col-sm-4 col-lg-4 col-form-label">Hora:</label>
+              <div class="col-sm-8 col-lg-8">
+                  <input type="time" id="hora" name="hora" class="form-control">
+              </div>
+          </div>
+
+          <div class="form-group row">
+              <label class="col-sm-4 col-lg-4 col-form-label">Problema del Dispositivo:</label>
+              <div class="col-sm-8 col-lg-8">
+                  <textarea id="problema" name="problema" class="form-control"></textarea>
+              </div>
+          </div>
+          <div class="form-group">
+                  <button type="submit" class="btn btn-success w-100 d-block">Crear Cita</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
